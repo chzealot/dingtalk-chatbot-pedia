@@ -28,6 +28,13 @@
 
 ![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/1814797e-b6c2-496b-a5bf-6c36e6b8eb7b)
 
+## 我以前建的机器人是在机器人那里建的，现在要迁移到钉钉用里面吗？
+
+建议还是在钉钉应用内创建机器人，后面最外层的机器人入口会下线的
+
+## Stream模式理解不了，不用推送的吗
+
+这个Stream模式的文档说明，https://open.dingtalk.com/document/resourcedownload/Introduction-to-stream-mode，主要是免去开发者申请公网域名，IP，服务器的成本。通过可信的方式与钉钉建立连接来接收回调消息
 
 
 
