@@ -159,5 +159,24 @@ https://pypi.org/project/requests/
 
 ![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/0b631dac-baac-4cdd-adb1-6ab7445e8ae4)
 
+python 的 依赖里面，尝试一下这个版本号组合：
+
+```
+requests==2.30.0
+urllib3==1.26.15
+```
+
+高版本的 urllib3 对ssl校验策略也发生了一些变化
+
+## 以前用http模式的是，如果用户的内容里面有"alter table" "insert into" 这类的内容，钉钉会过滤掉，现在stream模式没有过滤，请问以后也不会过滤了吧
+
+近期不会，未来也会谨慎支持。这类waf误判率对开发者有一定的负面影响。
+当时安全需求我们会持续关注，有相关想法可以随时跟我们交流 
+
+## 你好问一下, stream 模式下 机器人不能获取 'msgtype' 为 'file' 格式的文件内容吗
+
+这个需要使用open api来处理 https://open.dingtalk.com/document/orgapp/download-the-file-content-of-the-robot-receiving-message
+
+
 
 
