@@ -177,6 +177,248 @@ urllib3==1.26.15
 
 这个需要使用open api来处理 https://open.dingtalk.com/document/orgapp/download-the-file-content-of-the-robot-receiving-message
 
+## 但是发送端仍然只支持有限几种格式吗
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/01c4ad1d-580a-46ac-8121-28cb37d8d814)
+
+还有哪些文件类型需求可以发出来我们评估一下 
+
+
+## upload 文件到钉钉后, 获取的 mediaids 如何使用?
+不能钉钉机器人没有接口可以直接回一个文件吗
+
+回复文件这个需求，有业务需求的话，可以加我好友，作为共创客户先试点一下。跑顺畅后就全量开放出来。
+
+## 你好，我原本H5应用里的机器人通过https可以收到消息的回调，但是前两天突然收不到了。用了dingtalk-stream的python版sdk，放入appkey和appsecret也没有用。这是为什么？
+
+## 各位老师，现在Stream摸索支持C#吗，还是要等新的SDK
+
+目前团队里面没有专业的C#开发，但是有开发者原因参与的哈，我们非常乐意和鼓励这种贡献：
+1、通过测试后，我们可以提供官网渠道推荐和对贡献者的感谢
+2、提供单独的SDK交流群，提升协作效率
+3、提供协议文档（比较简单）。协议文档还在编写，近期会开放出来。如果有有人在GitHub上立项开发SDK的话，我们可以提前单独提供协议文档
+
+## 阿里大佬们，想实现个钉钉自动回复的机器人，这个有参考样例么
+
+群公告里有github项目可以参考。其他语言的我尽快更新到群公告里
+
+## 有钉钉机器人@机器人的办法么?
+
+当前不支持
+
+## 请问哪位有自动问答机器人的Demo的？或者文档也行啊
+
+## 服务端 Stream 的SDK有PHP版本吗？
+
+暂时没有
+
+## 有个问题需要请教一下大家 ，项目本地调试请求本地服务可以访问到，但是请求生产环境服务器请求失败， 控制台报错   
+error: 19
+errorMessage: "HTTP错误"
+originalData: undefined
+
+## 想请问下，stream模式下的python版本，有接收卡片按钮事件回调的使用例子吗？
+
+## 最近是不是改成12小时重新建立一次websocket连接了，之前好像是半小时
+
+## 想请问下，stream模式下的python版本，有接收卡片按钮事件回调的使用例子吗？
+
+可以参考 https://open.dingtalk.com/document/isvapp/event-callback-card
+
+我在python代码中注册了'/v1.0/card/instances/callback'这个事件监听，点击卡片的按钮。但是在websocket这，并未收到事件消息。
+
+https://open.dingtalk.com/document/isvapp/interface-for-creating-a-card-instance 需要指定卡片回调模式 
+
+## 现在是不是http回调的方式已经停用了？
+
+很久没有做“停用”这种操作。
+比较早期的时候，针对群设置中创建的自定义机器人关闭了outgoing能力。原因是很多群缺乏组织归属，法务合规上上风险较高，从合规上给关闭了。
+但是，在开发者后台里，创建的应用机器人，是有明确的组织归属，一直都没有限制。HTTPS和Stream模式回调都是开放的。
+
+## Arguments: (SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'),)
+
+请问下，这个报错原因是为什么？
+
+安全证书问题 发送请求时 忽略证书认证 我是临时怎么解决的 
+
+
+## 现在golang创建审批有什么SDK是支持的吗，我看有些SDK最近更新都是两年前了
+
+现在golang创建审批有什么SDK是支持的吗，我看有些SDK最近更新都是两年前了
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/0b3d4478-7071-44af-ad3a-bfe7ec697bfb)
+
+## 怎么把群成员手机号导出了呢
+
+1、通过会话管理接口，获取群成员列表（主要是获取用户ID）：https://open.dingtalk.com/document/orgapp/session-management-overview
+2、通过通讯录接口，查询用户的手机号：https://open.dingtalk.com/document/orgapp/session-management-overview
+
+注意，群成员接口、通讯录接口都需要在开发者后台申请权限，获得企业管理员同意后才能调用成功。手机号是敏感信息，需要单独申请手机号权限。
+权限点申请文档：https://open.dingtalk.com/document/orgapp/add-api-permission
+
+## 请问下卡片的按钮链接可以像下面的地址一样设置用系统浏览器打开吗？
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/4a120cd5-2460-4454-8771-03f0e351f4dd)
+
+可以的。
+
+在这里查看卡片使用：https://card.dingtalk.com/card-builder
+
+## 请问下stream模式中，用户在群里@机器人后，机器人调用后端的服务，可能处理的时间比较久（比如需要处理10分钟以上）然后才会返回结果给钉钉机器人，在这种情况下机器人还会将结果发送给对应的人或者群里面吗？
+
+## sessionWebhook 这个超时时间是多久？10分钟？
+
+https://open.dingtalk.com/document/orgapp/the-application-robot-in-the-enterprise-sends-group-chat-messages
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/f4c64529-b315-499a-8824-2c45bc6ad59f)
+
+
+这个时间通过参数返回的
+
+## 怎么内网穿透
+
+自己搭建的话，可以用：https://github.com/fatedier/frp
+没有服务器的话，可以用：https://www.ngrok.cc/
+
+安全提醒：内网穿透在数据安全上有重大风险，经常有企业因为内网穿透导致安全事故。强烈建议不要使用内网穿透，尤其是不要在公司网络、生产服务中使用。
+
+我们也是考虑到这个因素，才设计出来 Stream 能力，避免了客户对内网穿透的依赖。
+
+## 请问目前dingtalk-stream-sdk-python支持卡片回调吗？
+
+支持的，接入方式和机器人类似，需要更换一个topic，参考文档卡片创建和 事件回调文档
+ https://open.dingtalk.com/document/orgapp/interface-for-creating-a-card-instance
+ https://open.dingtalk.com/document/orgapp/event-callback-card
+
+
+ 最新版 Python SDK 支持了卡片回调。
+升级到 dingtalk-stream-v.0.9.1 就可以了： https://pypi.org/project/dingtalk-stream/ 
+这里有示例代码： https://github.com/open-dingtalk/dingtalk-stream-sdk-python/blob/main/examples/cardcallback/cardcallback.py
+
+## 机器人clientid clientsecret 是同一个，但是功能不一样，部署了不同的应用，这样是ok的吗？
+
+订阅的topic不同就没关系
+
+## 请问加解密类中的DingCallbackCrypto和DingTalkEncryptor有什么区别
+
+没啥区别，DingTalkEncryptor.cs 是 C# 版本的DingCallbackCrypto
+
+## 请教下, 卡片消息里的回调按钮的配置, 是可以配置回调地址的吧, 
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/abfe7a46-3202-484d-a5c6-eb587abc1b59)
+
+示例里并没有, 如果要配的话应该怎么加
+
+这个截图是互动卡片普通版，不支持回调。
+需要回调的卡片参考这个文档：https://open.dingtalk.com/document/isvapp/register-card-callback-address （在这里注册的卡片回调可以通过请求参数选择 HTTP/Stream ）
+
+## 请问一下，官方文档里JAVA的demo中引入了com.aliyun.tea的包，但是我引入了钉钉最新的sdk后并没有这个包
+
+单独下载jar是不行的，会缺少其他依赖，建议maven管理依赖
+
+## https://open.dingtalk.com/document/orgapp/create-and-deliver-cards
+请问一下，如果是机器人单聊，如何通过这个接口让机器人给用户发卡片呢？
+
+机器人投放参数貌似没有关联机器人编码
+
+另外刚才调用了一次接口，报错信息如下：errorMsg': 'spaces of card is empty
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/5362b8d5-08a4-474f-a508-1036a7ef0a55)
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/39e04069-f8eb-4551-9896-2674edf535a4)
+
+
+yuanhao：DeliverCardRequestImGroupOpenDeliverModel 这个model里面可以设置robotCode
+这个错误是没有设置你需要投放的场域。
+
+单聊不需要设置robotCode，只需要设置属性为IM_ROBOT，需要以应用里面的机器人发。
+
+## 请问一下，互动卡片搭建时，如何设置按钮的大小，想把这两个按钮调小一点。
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/9eed9b4d-592a-4c70-a52a-7e9eece99d16)
+
+这个改不了。
+
+## 请问一下，我使用dingtalk-stream-sdk-python/examples/cardcallback/cardcallback.py这里的卡片回调代码，成功了，我这里只回传了一个字段，但是卡片中有3个数据字段，刚才试了一下，会把其他两个字段值置为空，这里有解决办法吗？
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/3a3971da-10f8-4a85-9319-f233ab22a89c)
+
+示例中字段都可以去掉，按照自己的实际需求回传数据
+
+卡片中设置了三个数据
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/f554ce40-8afb-469d-9280-cbc6851d7aa2)
+
+https://open.dingtalk.com/document/orgapp/event-callback-card
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/191a6712-5f0f-4b1f-91fe-37eaaaa3c261)
+
+，我只想更新do_feedback这个字段，其他字段保持不变，该怎么做？
+
+你们的这个文档上说是会全量覆盖？
+
+
+
+## 请问 stream python sdk 不支持card上按钮回调吗,  DingTalkStreamClient 看起来没有注册card回调的方法, register_callback_hanlder 这个看起来只接受普通的消息接收
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/4e2e31a1-1b91-4ce4-894c-af88ede5592c)
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/c9a57828-a7f8-4fb5-813b-3422e7aeba93)
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/0cb0a31b-8d14-4a5d-b85c-5c0640965a4a)
+
+最新版 Python SDK 支持了卡片回调。
+升级到 dingtalk-stream-v.0.9.1 就可以了： https://pypi.org/project/dingtalk-stream/ 
+这里有示例代码： https://github.com/open-dingtalk/dingtalk-stream-sdk-python/blob/main/examples/cardcallback/cardcallback.py
+
+
+
+## 那我给机器人发送卡片无论是私聊还是群聊，都依据conversationid来发送卡片？
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/43c5ac73-c58f-4926-a6e4-6aa7b6ff6ef8)
+
+私聊用single这个，群聊用上面那个
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/2c1f14dd-7d00-4d26-97cc-dc69e4829781)
+
+需要区分，单聊和群里可以参考这个代码，以及前面提供的文档链接。
+
+## 请问下 发送钉钉互动卡片（高级版）这个接口发的卡片回调按钮，在stream模式下能监听到吗
+
+可以的，发送卡片时候 callbackType 参数设置为 STREAM 即可
+说明文档：https://open.dingtalk.com/document/orgapp/interface-for-creating-a-card-instance
+
+## 请问机器人文本消息有字数限制吗？
+
+目前这个限制没有对机器人做特殊处理，跟钉钉聊天消息一样，超过限制会转成文本文件。这个限制目前没有明确公开、承诺，也不保证未来不会变化，建议不要出现显著过长的文本，比如一个长篇小说、大段代码之类的。
+
+## 请问下，启动测试案例，一直提供这个证书问题，请问如何处理呢
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/9a1e9216-9741-4d4b-b896-7a5c453ed9dc)
+
+我mac也碰到过，找到对应路径，执行下就行
+
+/Applications/Python 3.10/Install Certificates
+
+## 有oa审核回调吗，我看都是机器人的
+
+OA 审核还没接入，目前只接入了 事件订阅、卡片回调、机器人收消息。
+其他场景有强烈需求可以加好友单独沟通，我们评估一下能否共创接入起来
+
+## 协议就是websocket吗？可以用原生的c#自己实现吗？有什么特别需要注意的地方
+
+可以参考协议文档 https://open.dingtalk.com/document/direction/stream-mode-protocol-access-description
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
