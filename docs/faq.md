@@ -16,3 +16,18 @@
 
 这个属于打字机模式，还在设计中
 
+## 请问要显示图片信息，应该用哪个消息格式？我用 markdown，但是渲染不出图片
+
+我把这段内容复制出来在markdown里是可以显示的
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/2919e6b5-3c68-4cf3-9d8a-88f2bd363c41)
+，discord 被 q了啊。搞个反代，或者别的方式来实现
+
+## stream到底在哪里打开啊
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/bba95479-5432-445e-8dcf-564ab09ccc45)
+
+![image](https://github.com/chzealot/dingtalk-developerpedia/assets/22822/1814797e-b6c2-496b-a5bf-6c36e6b8eb7b)
+
+
+
+
