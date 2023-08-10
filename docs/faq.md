@@ -11,3 +11,8 @@
 我们乐于接受开发者贡献，为此已经开放了 Stream 协议的文档：https://open.dingtalk.com/document/direction/stream-mode-protocol-access-description。
 
 欢迎开发者联系平台，参与 SDK 的开发和完善。
+
+## 请问可以编辑已发送的消息吗？
+
+这个属于打字机模式，还在设计中
+
