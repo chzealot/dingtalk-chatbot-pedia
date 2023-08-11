@@ -9,6 +9,12 @@
     - [API ChangeLog](explore/changelog/api.md)
   - [尝试API](explore/tryapi)
   - [快速开始](explore/quick-start)
+  - 教程
+    - [概述](explore/tutorials/overview.md)
+    - API 教程
+    - Stream 机器人教程
+      - 
+    - 脚手架教程
 
 - 学习
 
