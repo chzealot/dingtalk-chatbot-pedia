@@ -13,7 +13,6 @@
     - [概述](explore/tutorials/overview.md)
     - API 教程
     - Stream 机器人教程
-      - 
     - 脚手架教程
 
 - 学习
@@ -26,6 +25,12 @@
     - [概述](learn/users/overview.md)
     - [默认用户权限](learn/users/overview.md)
     - [培训学习：访问用户数据](learn/users/overview.md)
+  - 机器人
+    - [概述](learn/bot/overview.md)
+    - [群 Webhook 机器人](learn/bot/webhook-bot.md)
+      - [概述](learn/bot/webhook/overview.md)
+    - [应用机器人](learn/bot/app-bot.md)
+      - [概述](learn/bot/app/overview.md)
   - 应用
     - 
   - 事件
