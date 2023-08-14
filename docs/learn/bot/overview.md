@@ -15,20 +15,22 @@
 
 缺点
 
-1. 仅支持 incoming 消息，不支持 outgoing。（受限于合规要求，机器人必须有认证过的实体才能创建，并且有明确的认证过的开发者组织）
-2. 发消息能力受限，不支持互动卡片等形式的消息发送
-3. API能力受限，不支持调用 OpenAPI，例如发送图片时必须使用外部图床，不能通过钉钉 OpenAPI 来上传图片
+1. 仅支持通过机器人向群内发送消息，不支持接收消息。（受限于合规要求，机器人必须有认证过的实体才能创建，并且有明确的认证过的开发者组织）
+2. 不支持单聊，仅支持群聊
+3. 发消息能力受限，不支持互动卡片等形式的消息发送
+4. API能力受限，不支持调用 OpenAPI，例如发送图片时必须使用外部图床，不能通过钉钉 OpenAPI 来上传图片
 
-### 应用机器人
+### 应用机器人（推荐）
 
 优点
 
 这种方式创建的机器人归属于一个钉钉平台的应用，因此具备应用开发的丰富能力。
 
-1. 完整的收发消息能力，既能接收 incoming 消息，支持 outgoing 的消息接收
-2. 支持 [Stream Mode](https://open.dingtalk.com/document/resourcedownload/Introduction-to-stream-mode)，开发过程极其简单
-3. 支持以应用身份调用全部的 OpenAPI，例如调用上传图片文件到钉钉平台，获得MediaID后用于Markdown消息中图片展示（钉钉markdown消息中，支持在图片url地方填写MediaID）
-4. 支持发送[互动卡片消息](https://open.dingtalk.com/document/orgapp/overview-card)，更丰富的消息交互能力
+1. 完整的收发消息能力，既能发送消息，也能接收消息
+2. 支持单聊和群聊
+3. 支持 [Stream Mode](https://open.dingtalk.com/document/resourcedownload/Introduction-to-stream-mode)，开发过程极其简单
+4. 支持以应用身份调用全部的 OpenAPI，例如调用上传图片文件到钉钉平台，获得MediaID后用于Markdown消息中图片展示（钉钉markdown消息中，支持在图片url地方填写MediaID）
+5. 支持发送[互动卡片消息](https://open.dingtalk.com/document/orgapp/overview-card)，更丰富的消息交互能力
 
 缺点
 

@@ -47,5 +47,8 @@
     - [概述](develop/auth/overview.md)
     - [基本概念](develop/auth/overview.md)
     - [创建应用](develop/auth/overview.md)
+  - SDK
+    - [概述](develop/sdk/overview.md)
+  - 示例工程
   - [API v1.0 参考](develop/api/1.0/reference.md)
   - [API v2.0 参考](develop/api/2.0/reference.md)
